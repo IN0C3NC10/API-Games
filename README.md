@@ -35,7 +35,7 @@ Plugins:
 <!-- Pré-Requisitos -->
 <h2 align="left" id="pre">Pré-Requisitos</h2>
 
-Antes de começar vale lembrar, é necessário possuir o [Node](https://nodejs.org/en/) instalado em sua máquina e como estamos trabalhando com uma API precisamos de alguma forma fazer as requisições, então deixo o [Postman](https://www.postman.com/downloads/) como recomendação. É bacana também você possuir um editor para trabalhar com o código, fica a dica o [VSCode](https://code.visualstudio.com/download).
+Antes de começar vale lembrar, é necessário possuir o [Java](https://www.java.com/pt-BR/) instalado e o [Maven](https://maven.apache.org/download.cgi) baixado em sua máquina e como estamos trabalhando com uma API precisamos de alguma forma fazer as requisições, então deixo o [Postman](https://www.postman.com/downloads/) como recomendação. É bacana também você possuir um editor para trabalhar com o código, fica a dica o [VSCode](https://code.visualstudio.com/download).
 
 
 <!-- Features -->
