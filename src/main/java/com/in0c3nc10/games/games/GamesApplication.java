@@ -22,7 +22,7 @@ public class GamesApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		// ..cria algumas inserções por padrão
+		// ..cria algumas inserções por padrão via CommandLine
 		Games g1 = new Games(null, "Red Dead Redemption 2", "Ação/Aventura");
 		Games g2 = new Games(null, "Forza Horizon 5", "Corrida");
 		gamesRepository.saveAll(Arrays.asList(g1,g2));

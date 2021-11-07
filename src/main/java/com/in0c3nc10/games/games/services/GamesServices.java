@@ -3,6 +3,7 @@ package com.in0c3nc10.games.games.services;
 import java.util.Optional;
 
 import com.in0c3nc10.games.games.domain.Games;
+import com.in0c3nc10.games.games.exceptions.services.ObjectNotFoundException;
 import com.in0c3nc10.games.games.repositories.GamesRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ public class GamesServices {
 
     public Games findById(Integer id){
         Optional<Games> obj = repository.findById(id);
-        // ..caso encontrar ele retorna o game, se não nulo
-        return obj.orElse(null);
+        // ..caso encontrar ele retorna o game, se não ele retorna a throw ObjectNotFound
+        return obj.orElseThrow(()-> new ObjectNotFoundException("Objeto "+ id +" não encontrado!"));
     }
 }

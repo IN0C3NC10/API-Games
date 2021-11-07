@@ -11,7 +11,7 @@ import org.hibernate.validator.constraints.Length;
 @Entity
 public class Games implements Serializable{
 
-    // ..é usado como boa prática o Serializable
+    // ..é usado como boa prática
     private static final long serialVersionUID=1L;
 
     // ..informa ao JPA que o "id" é uma pk, e abaixo é o método de gerar o valor
