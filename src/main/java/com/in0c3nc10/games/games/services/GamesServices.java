@@ -45,4 +45,12 @@ public class GamesServices {
         obj.setId(null);
         return repository.save(obj);
     }
+
+    // ..DELETAR OS DADOS
+    public void delete(Integer id) {
+        // ..verifica a existência do id
+        findById(id);
+        // ..deleta com o auxilio do JPA
+        repository.deleteById(id);
+    }
 }

@@ -50,4 +50,12 @@ public class GamesController {
         return ResponseEntity.created(uri).build();
     }
 
+    // ..DELETAR OS DADOS
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Integer id){
+        // ..chama a operação na service
+        service.delete(id);
+        // ..não retorna nenhum conteúdo
+        return ResponseEntity.noContent().build();
+    }
 }
