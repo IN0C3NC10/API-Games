@@ -38,4 +38,11 @@ public class GamesServices {
         // ..de fato salva os dados
         return repository.save(newObj);
     }
+
+    // ..INSERIR OS DADOS
+    public Games create(Games obj) {
+        // ..por segurança setamos o Id como nulo
+        obj.setId(null);
+        return repository.save(obj);
+    }
 }

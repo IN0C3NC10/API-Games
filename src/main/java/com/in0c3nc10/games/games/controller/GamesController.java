@@ -1,5 +1,6 @@
 package com.in0c3nc10.games.games.controller;
 
+import java.net.URI;
 import java.util.List;
 
 import com.in0c3nc10.games.games.domain.Games;
@@ -8,6 +9,7 @@ import com.in0c3nc10.games.games.services.GamesServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
 @RequestMapping(value = "/games")
@@ -37,6 +39,15 @@ public class GamesController {
     public ResponseEntity<Games> update(@PathVariable Integer id, @RequestBody Games obj){
         Games newObj = service.update(id, obj);
         return ResponseEntity.ok().body(newObj);
+    }
+
+    // ..INSERIR OS DADOS
+    @PostMapping
+    public ResponseEntity<Games> create(@RequestBody Games obj){
+        Games newObj = service.create(obj);
+        // ..uri nada mais é que o retorno ao usuário do registro que ele acabou de criar
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(newObj.getId()).toUri();
+        return ResponseEntity.created(uri).build();
     }
 
 }
