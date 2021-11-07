@@ -1,5 +1,6 @@
 package com.in0c3nc10.games.games.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.in0c3nc10.games.games.domain.Games;
@@ -19,5 +20,9 @@ public class GamesServices {
         Optional<Games> obj = repository.findById(id);
         // ..caso encontrar ele retorna o game, se não ele retorna a throw ObjectNotFound
         return obj.orElseThrow(()-> new ObjectNotFoundException("Objeto "+ id +" não encontrado!"));
+    }
+
+    public List<Games> findAll() {
+        return repository.findAll();
     }
 }
