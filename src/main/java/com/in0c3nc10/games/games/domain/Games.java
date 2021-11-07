@@ -50,7 +50,7 @@ public class Games implements Serializable{
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name.toUpperCase();
     }
 
     public String getCategory() {
@@ -58,7 +58,7 @@ public class Games implements Serializable{
     }
 
     public void setCategory(String category) {
-        this.category = category;
+        this.category = category.toUpperCase();
     }
 
     // ..hashcode do Id
