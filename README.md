@@ -30,6 +30,7 @@ Plugins:
 - Spring Web
 - Spring Boot DevTools
 - H2 Database
+- SpringFox - Swagger
 
 
 <!-- Pré-Requisitos -->
@@ -46,6 +47,7 @@ Antes de começar vale lembrar, é necessário possuir o [Java](https://www.java
 - [x] Find by Id - Get("/games/{id}");
 - [x] Update - Put("/games/{id}");
 - [x] Delete - Delete("/games/{id}");
+- [x] Docs - Get("/swagger-ui/");
 
 
 <!-- Executando o programa -->
