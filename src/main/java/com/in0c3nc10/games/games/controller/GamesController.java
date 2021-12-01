@@ -14,16 +14,16 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
-@Api(value = "Games Endpoint 'Games'", tags = {"Endpoint"})
+@Api(value = "API Endpoint 'Cat Barbecue'", tags = {"Endpoint"})
 @RestController
-@RequestMapping(value = "/games")
+@RequestMapping(value = "/api/catbarbecue")
 public class GamesController {
     
     @Autowired
     private GamesServices service;
 
     // ..PESQUISAR PELO ID
-    @ApiOperation(value = "Show one Game with its id", response = Games.class)
+    @ApiOperation(value = "Show one Barbecue with its id", response = Games.class)
     @GetMapping(value = "/{id}")
     public ResponseEntity<Games> findById(@PathVariable Integer id){
         Games obj = this.service.findById(id);
@@ -31,7 +31,7 @@ public class GamesController {
     }
 
     // ..PESQUISAR TODOS OS DADOS
-    @ApiOperation(value = "Show all Games in database", response = List.class)
+    @ApiOperation(value = "Show all Barbecues in database", response = List.class)
     @GetMapping
     public ResponseEntity<List<Games>> findAll(){
         // ..acessa o método da service
@@ -41,7 +41,7 @@ public class GamesController {
     }
 
     // ..ALTERAR OS DADOS
-    @ApiOperation(value = "Change a Game by its id and show it", response = Games.class)
+    @ApiOperation(value = "Change a Barbecue by its id and show it", response = Games.class)
     @PutMapping(value = "/{id}")
     public ResponseEntity<Games> update(@PathVariable Integer id, @RequestBody Games obj){
         Games newObj = service.update(id, obj);
@@ -49,7 +49,7 @@ public class GamesController {
     }
 
     // ..INSERIR OS DADOS
-    @ApiOperation(value = "Persist an Game", response = Games.class)
+    @ApiOperation(value = "Persist an Barbecue", response = Games.class)
     @PostMapping
     public ResponseEntity<Games> create(@RequestBody Games obj){
         Games newObj = service.create(obj);
@@ -59,7 +59,7 @@ public class GamesController {
     }
 
     // ..DELETAR OS DADOS
-    @ApiOperation(value = "Remove a Game with its id", response = Games.class)
+    @ApiOperation(value = "Remove a Barbecue with its id", response = Games.class)
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<Void> delete(@PathVariable Integer id){
         // ..chama a operação na service

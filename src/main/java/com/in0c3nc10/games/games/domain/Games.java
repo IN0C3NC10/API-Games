@@ -9,10 +9,10 @@ import org.hibernate.validator.constraints.Length;
 
 // ..com esta notação é criado uma tabela no database
 @Entity
-public class Games implements Serializable{
+public class Games implements Serializable {
 
     // ..é usado como boa prática
-    private static final long serialVersionUID=1L;
+    private static final long serialVersionUID = 1L;
 
     // ..informa ao JPA que o "id" é uma pk, e abaixo é o método de gerar o valor
     @Id
@@ -22,21 +22,36 @@ public class Games implements Serializable{
     @NotEmpty(message = "Campo NOME é obrigatório!")
     @Length(min = 4, max = 150, message = "O campo NOME deve conter entre 3 e 150 caracteres!")
     private String name;
-    @NotEmpty(message = "Campo CATEGORIA é obrigatório!")
-    @Length(min = 2, max = 70, message = "O campo CATEGORIA deve conter entre 2 e 70 caracteres!")
-    private String category;
-    
-    // ..construtores
+
+    @NotEmpty(message = "Campo RAÇA é obrigatório!")
+    @Length(min = 2, max = 70, message = "O campo RAÇA deve conter entre 2 e 70 caracteres!")
+    private String race;
+
+    private Double price;
+
+    @NotEmpty(message = "Campo STATUS é obrigatório!")
+    @Length(min = 4, max = 70, message = "O campo STATUS deve conter entre 4 e 70 caracteres!")
+    private String status;
+
     public Games() {
     }
 
-    public Games(Integer id, String name, String category) {
+    public Games(Integer id,
+            @NotEmpty(message = "Campo NOME é obrigatório!") @Length(min = 4, max = 150, message = "O campo NOME deve conter entre 3 e 150 caracteres!") String name,
+            @NotEmpty(message = "Campo RAÇA é obrigatório!") @Length(min = 2, max = 70, message = "O campo RAÇA deve conter entre 2 e 70 caracteres!") String race,
+             Double price,
+            @NotEmpty(message = "Campo STATUS é obrigatório!") @Length(min = 4, max = 70, message = "O campo STATUS deve conter entre 4 e 70 caracteres!") String status) {
         this.id = id;
         this.name = name;
-        this.category = category;
+        this.race = race;
+        this.price = price;
+        this.status = status;
     }
 
-    // ..gets and sets
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -50,15 +65,31 @@ public class Games implements Serializable{
     }
 
     public void setName(String name) {
-        this.name = name.toUpperCase();
+        this.name = name;
     }
 
-    public String getCategory() {
-        return category;
+    public String getRace() {
+        return race;
     }
 
-    public void setCategory(String category) {
-        this.category = category.toUpperCase();
+    public void setRace(String race) {
+        this.race = race;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     // ..hashcode do Id

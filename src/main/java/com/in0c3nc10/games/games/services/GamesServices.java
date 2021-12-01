@@ -34,7 +34,9 @@ public class GamesServices {
         Games newObj = findById(id);
         // ..insere os dados na instância newObj
         newObj.setName(obj.getName());
-        newObj.setCategory(obj.getCategory());
+        newObj.setRace(obj.getRace());
+        newObj.setPrice(obj.getPrice());
+        newObj.setStatus(obj.getStatus());
         // ..de fato salva os dados
         return repository.save(newObj);
     }

@@ -23,9 +23,11 @@ public class GamesApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		// ..cria algumas inserções por padrão via CommandLine
-		Games g1 = new Games(null, "Red Dead Redemption 2", "Ação/Aventura");
-		Games g2 = new Games(null, "Forza Horizon 5", "Corrida");
-		gamesRepository.saveAll(Arrays.asList(g1,g2));
+		Games g1 = new Games(null, "Espetinho de Gato com Pimenta", "Persa", 14.78, "Preparando");
+		Games g2 = new Games(null, "Espetinho de Gato com Molho Inglês", "Siamês", 11.80, "Pronto");
+		Games g3 = new Games(null, "Espetinho de Gato com Alho", "Sphynx", 29.30, "Assando");
+		Games g4 = new Games(null, "Espetinho de Gato com Ketchup", "Donskoy", 23.50, "Preparando");
+		gamesRepository.saveAll(Arrays.asList(g1,g2,g3,g4));
 	}
 
 }
