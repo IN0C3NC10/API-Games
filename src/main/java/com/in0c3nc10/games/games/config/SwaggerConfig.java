@@ -27,7 +27,7 @@ public class SwaggerConfig {
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfo("Documentation for API - Games",
+        return new ApiInfo("Documentation for API - Cat Barbecue",
                 "These are a simple documentation for you understand exactly what my API can do, let's go?",
                 "v1.0.0",
                 "https://github.com/IN0C3NC10",

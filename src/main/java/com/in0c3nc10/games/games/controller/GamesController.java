@@ -14,7 +14,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
-@Api(value = "API Endpoint 'Cat Barbecue'", tags = {"Endpoint"})
+@Api(value = "API Endpoint 'Cat Barbecue'", tags = {"Endpoints"})
 @RestController
 @RequestMapping(value = "/api/catbarbecue")
 public class GamesController {
@@ -23,11 +23,17 @@ public class GamesController {
     private GamesServices service;
 
     // ..PESQUISAR PELO ID
-    @ApiOperation(value = "Show one Barbecue with its id", response = Games.class)
+    @ApiOperation(value = "Show one Barbecue, with your id", response = Games.class)
     @GetMapping(value = "/{id}")
     public ResponseEntity<Games> findById(@PathVariable Integer id){
         Games obj = this.service.findById(id);
         return ResponseEntity.ok().body(obj);
+    }
+
+    @ApiOperation(value = "Show all Barbecue, using your race", response = Games.class)
+    @GetMapping("/search/{param}")
+    public List<Games> listByRace(@PathVariable("param") String param){
+        return service.listByRace(param);
     }
 
     // ..PESQUISAR TODOS OS DADOS
