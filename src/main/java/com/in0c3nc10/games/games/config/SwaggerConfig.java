@@ -28,7 +28,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfo("Documentation for API - Games",
-                "These are a simple documentation for you understand exactly what my API can do, let's go?",
+                "These are a simple documentation for you understand exactly what my API can do, let's go? Starting, you can see the Endpoints, with these 'fellas' you can know what method and your syntax, if need a parameter or not anyway, for search data from my API. After that we have the Models, in our case, we just have one 'Games' and if you click in him it's possible see their attributes. Well, it's so simple right? Then 'let's rock'!",
                 "v1.0.0",
                 "https://github.com/IN0C3NC10",
                 new Contact("Bruno Inocêncio", "https://github.com/IN0C3NC10", "bruno.inocencio@fatec.sp.gov.br"),
