@@ -42,11 +42,13 @@ Antes de começar vale lembrar, é necessário possuir o [Java](https://www.java
 <!-- Features -->
 <h2 align="left" id="conteúdo">Funcionalidades</h2>
 
-- [x] Find All - Get("/games");
-- [x] Create - Post("/games");
-- [x] Find by Id - Get("/games/{id}");
-- [x] Update - Put("/games/{id}");
-- [x] Delete - Delete("/games/{id}");
+- [x] Find All - Get("/api/games");
+- [x] Create - Post("/api/games");
+- [x] Find by Id - Get("/api/games/{id}");
+- [x] Find by Name - Get("/api/games/name/{param}");
+- [x] Find by Category - Get("/api/games/category/{param}");
+- [x] Update - Put("/api/games/{id}");
+- [x] Delete - Delete("/api/games/{id}");
 - [x] Docs - Get("/swagger-ui/");
 
 
