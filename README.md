@@ -10,7 +10,7 @@
 <!-- Shield -->
 <p>
 	<img src="https://img.shields.io/badge/Made%20with-Spring Boot-6DB33F?style=for-the-badge&logo=spring&logoColor=6DB33F" title="Feito com SpringBoot" alt="Feito com SpringBoot"></img>
-  <img src="https://img.shields.io/badge/Used-Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=FF6C37" title="Utilizado o Postman" alt="Utilizado o Postman"></img>
+  <img src="https://img.shields.io/badge/Requests%20with-Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=FF6C37" title="Requisições feitas pelo Postman" alt="Requisições feitas pelo Postman"></img>
   <!--<img src="https://img.shields.io/badge/Status-Working-F08705?style=for-the-badge" title="Status do Projeto: Trabalhando" alt="Projeto em Andamento"></img>-->
   <img src="https://img.shields.io/badge/Status-Done-blue?style=for-the-badge" title="Status do Projeto: Concluído" alt="Projeto Concluído"></img>
 </p>
